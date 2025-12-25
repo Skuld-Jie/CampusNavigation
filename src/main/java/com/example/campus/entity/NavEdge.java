@@ -13,6 +13,5 @@ public class NavEdge {
     private Long fromNode;
     private Long toNode;
     private Double distance;
-    private Double walkSpeed;
-    private Double bikeSpeed;
+
 }

@@ -3,8 +3,11 @@ package com.example.campus.controller;
 import com.example.campus.entity.NavNode;
 import com.example.campus.enums.TravelMode;
 import com.example.campus.mapper.NavNodeMapper;
+import com.example.campus.service.NavNodeService;
 import com.example.campus.service.NavService;
 import lombok.RequiredArgsConstructor;
+
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -19,6 +22,7 @@ public class NavController {
 
     private final NavService navService;
     private final NavNodeMapper nodeMapper;
+    private final NavNodeService navNodeService;
 
     /**
      * 查询所有导航节点（用于下拉框）
@@ -49,5 +53,8 @@ public class NavController {
 
         return res;
     }
-
 }
+
+
+
+

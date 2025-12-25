@@ -10,9 +10,6 @@ import org.springframework.context.annotation.Configuration;
 @MapperScan("com.example.campus.mapper")
 public class MybatisPlusConfig {
 
-    /**
-     * 新增分页拦截器，并设置数据库类型为MYSQL
-     */
     @Bean
     public MybatisPlusInterceptor mybatisPlusInterceptor() {
         MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();

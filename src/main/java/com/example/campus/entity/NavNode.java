@@ -12,6 +12,12 @@ public class NavNode {
     private String name;
     private Double lng;
     private Double lat;
+    private String category;
+    private String description;
+    private String image;
+    private String imageUrl;
+    private String openTimeSchool;
+    private String openTimeHoliday;
 }
 
 
