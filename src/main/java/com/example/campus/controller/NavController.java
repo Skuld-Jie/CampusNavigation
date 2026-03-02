@@ -3,11 +3,8 @@ package com.example.campus.controller;
 import com.example.campus.entity.NavNode;
 import com.example.campus.enums.TravelMode;
 import com.example.campus.mapper.NavNodeMapper;
-import com.example.campus.service.NavNodeService;
 import com.example.campus.service.NavService;
-import lombok.RequiredArgsConstructor;
-
-import org.springframework.http.ResponseEntity;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -17,24 +14,22 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/nav")
 @CrossOrigin
-@RequiredArgsConstructor
 public class NavController {
 
-    private final NavService navService;
-    private final NavNodeMapper nodeMapper;
-    private final NavNodeService navNodeService;
+    @Autowired
+    private NavService navService;
+    @Autowired
+    private NavNodeMapper nodeMapper;
 
-    /**
-     * 查询所有导航节点（用于下拉框）
-     */
+
+      // 查询所有导航节点（用于下拉框）
+
     @GetMapping("/nodes")
     public List<NavNode> listNodes() {
         return nodeMapper.selectList(null);
     }
 
-    /**
-     * 最短路径
-     */
+    // 最短路径
     @GetMapping("/path")
     public Map<String, Object> path(
             @RequestParam Long start,
@@ -54,7 +49,3 @@ public class NavController {
         return res;
     }
 }
-
-
-
-

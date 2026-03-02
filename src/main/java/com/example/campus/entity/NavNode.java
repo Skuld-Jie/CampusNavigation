@@ -3,7 +3,8 @@ package com.example.campus.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import lombok.*;
+import lombok.Data;
+
 @Data
 @TableName("nav_node")
 public class NavNode {
@@ -14,8 +15,6 @@ public class NavNode {
     private Double lat;
     private String category;
     private String description;
-    private String image;
-    private String imageUrl;
     private String openTimeSchool;
     private String openTimeHoliday;
 }

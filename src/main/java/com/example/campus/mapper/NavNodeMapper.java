@@ -13,6 +13,7 @@ public interface NavNodeMapper extends BaseMapper<NavNode> {
     @Select("SELECT description, openTimeSchool, openTimeHoliday FROM nav_node WHERE id = #{id}")
     NavNode selectLocationInfo(@Param("id") Long id);
 
+
     @Select("SELECT * FROM nav_node WHERE id = #{id}")
     NavNode selectByIdWithAllInfo(@Param("id") Long id);
 
@@ -20,4 +21,3 @@ public interface NavNodeMapper extends BaseMapper<NavNode> {
     @Select("SELECT * FROM nav_node ORDER BY SQRT(POWER(lng - #{lng}, 2) + POWER(lat - #{lat}, 2)), id LIMIT 1")
     NavNode selectByCoordinates(@Param("lng") double lng, @Param("lat") double lat);
 }
-
