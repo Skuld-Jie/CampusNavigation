@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>校园导航系统</title>
+    <script src="https://api.map.baidu.com/api?v=3.0&ak=2tLh20uLviAxTn1H1slSBtQ9VzIHHnI5"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>校 园 导 游 系 统</h1>
+        <p>智能规划您的校园出行路线</p>
+    </div>
+    
+    <div class="container">
+        <div class="control-panel">
+            <div class="form-group">
+                <label for="mode">出行方式：</label>
+                <select id="mode">
+                    <option value="WALK">步行</option>
+                    <option value="BIKE">自行车</option>
+                    <option value="E_BIKE">电动车</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="start">起点：</label>
+                <input type="text" id="start-search" placeholder="输入起点搜索...">
+                <select id="start"></select>
+            </div>
+            
+            <div class="form-group">
+                <label for="end">终点：</label>
+                <input type="text" id="end-search" placeholder="输入终点搜索...">
+                <select id="end"></select>
+            </div>
+            
+            <div class="form-group">
+                <button onclick="nav()">开始导航</button>
+            </div>
+            
+            <div id="result" class="result">
+                <h3>导航结果</h3>
+                <div class="result-item">总距离：<span id="distance"></span> 米</div>
+                <div class="result-item">预计时间：<span id="time"></span> 分钟</div>
+            </div>
+        </div>
+        
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+        
+        <div class="path-details-panel">
+            <div id="path-details" class="path-details"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
