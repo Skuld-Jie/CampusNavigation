@@ -32,7 +32,7 @@ Spring + SpringBoot +MyBatis-Plus
 
 白名单 标记为 `*`
 
-![屏幕截图 2026-03-03 094854](https://cdn.jsdelivr.net/gh/Skuld-Jie/First-cup@main/notebook-pictures/Class/屏幕截图 2026-03-03 094854.png)
+![image-20260303101619875](https://cdn.jsdelivr.net/gh/Skuld-Jie/First-cup@main/notebook-pictures/Class/image-20260303101619875.png)
 
 提交后 获得 AK ， 替换 `index.html` 中的 AK即可
 
